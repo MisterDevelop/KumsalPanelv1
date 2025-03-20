@@ -1,13 +1,6 @@
 import random
 import time
 
-uyuma_saat = [2,3,4,5,6,7]
-random_uyuma = random.choice(uyuma_saat)
-
-guvenme_sekli = ["Yavuz sizi ekti(onun için kek yapmıştınız).","Yaman sırasını değiştirdi.","Hamza planlara dahil edilmedi.","Yaman ona yalan söyledi."]
-random_guvenme = random.choice(guvenme_sekli)
-
-
 def devam_etme():
     devam = str(input("Çıkmak için T devam etmek D: ")).lower()
     if devam == "t":
@@ -19,61 +12,74 @@ def devam_etme():
         time.sleep(1)
         exit()
 
+ekler=[1,2,3,4,5,6]
+random_ekler=random.choice(ekler)
 
-
-
-while True:
+print(" ")
+print("KUMSAL PANEL v1")
+print(" ")
+print("ÇIKMA TEKLİFİ REDDETME - 1")
+print("İNSTA STORY ATMAK İÇİN(dolandırıcı) - 2")
+print("GÜNER ELAYA OROSPU DEMEK İÇİN - 3")
+print("SINIFTAKİLERİ BOYAMAK İÇİN - 4")
+print("KEKOLARLA TAKILMAK İÇİN - 5")
+print("EKLER ALMAK İÇİN - 6")
+print("TRİP ATMAK İÇİN - 7")
+print("ENGELLEMEK İÇİN - 8")
+print(" ")
+secim = int(input("Seçim: "))
+if secim == 1:
     print(" ")
-    print("HAMZA PANEL V1 💀")
+    print("ŞUANKİ ÇIKMA TEKLİFLERİ")
+    print("Hamza, Yaman")
     print(" ")
-    print("KIZINIZIN ADINI KOYMAK İÇİN - 1")
-    print("MARTI SESİ ÇIKARMAK İÇİN - 2")
-    print("MAL MAL SİNİRLENMEK İÇİN - 3")
-    print("TAVUKLU BÖREK İKRAM ETMEK İÇİN - 4")
-    print("UYUMAK İÇİN - 5")
-    print("BİRİNE GÜVENMEK İÇİN - 6")
-    print("BİRİNE ÇIKMA TEKLİFİ ETMEK İÇİN - 7")
+    reddet = str(input("Kimi reddedeceksiniz?: ")).lower()
+    if reddet == "hamza":
+        print("Hamza başarıyla reddedildi!")
+    elif reddet == "yaman":
+        print("Yaman başarıyla reddedildi!")
+    devam_etme()
+
+if secim == 2:
     print(" ")
-    secim = int(input("Seçiminiz?: "))
-    if secim == 1:
-        kiziniz = str(input("Kızınızın adını giriniz: "))
-        if kiziniz == "kumsal":
-            print("Doğru seçim! kızınızın ismi kumsal!")
-        else:
-            print("Yanlış seçim! Kumsal olmalıydı!")
-        devam_etme()
-    elif secim == 2:
-        print("Başarıyla martı sesi çıkardınız! Sınıfın çoğu seni oruspu evladı olarak nitelendiriyor.")
-        devam_etme()
-    elif secim == 3:
-        print("Başarıyla mal mal sinirlendiniz! Tüm sınıf seni ucube bir oruspu evladı olarak görüyor!")
-        devam_etme()
-    elif secim == 4:
-        print(
-            "Yavuza tavuklu börek ikram ettin! Yavuz emin ile böreğini paylaştı! herkes mutlu ve aranızdaki bağ güçlendi!")
-        devam_etme()
-    elif secim == 5:
-        print(f"Başarıyla uykuya daldınız. Bütün sınıf sen uyurken anana sövdü. Uyuma süreniz: {random_uyuma} ders.")
-        devam_etme()
-    elif secim == 6:
-        print(f"Başarıyla güvendiniz. Olay: {random_guvenme}")
-        devam_etme()
-    elif secim == 7:
-        isim = str(input("Kime çıkma teklifi edeceksiniz?: ")).lower()
-        if isim == "kumsal":
-            print("Kumsal sizi işletti ve reddetti.")
-        elif isim == "duru":
-            print("Çıkma teklifiniz kabul edildi.")
-        elif isim == "yaman":
-            print("Are you gay?")
-            secim_1 = str(input("Seçiminiz?: "))
-            if secim_1 == "evet":
-                print("Vayoc reddedildin.")
-            else:
-                print("ozaman sg oc")
-        else:
-            print(f"Çıkma teklifiniz {isim} tarafından reddedildi.")
-        devam_etme()
+    print("Başarıyla insta story atıldı! Yavuz ve yiğit seni dolandırıcı olarak adlandırdı!")
+    devam_etme()
 
+if secim == 3:
+    print(" ")
+    print("İzin veremiyoz.")
+    devam_etme()
 
+if secim == 4:
+    print(" ")
+    boya=str(input("Kimi boyayacaksınız?:"))
+    print(boya,"Başarıyla boyandı!(sonradan hepsini sildiler)")
+    devam_etme()
 
+if secim == 5:
+    print(" ")
+    print("Başarıyla kekolar ile takıdınız!(bölündünüz)")
+    devam_etme()
+
+if secim == 6:
+    print(" ")
+    print(f"Başarıyla {random_ekler} kadar ekler satın alındı ve yarısı yavuz yada yiğite verildi!")
+    devam_etme()
+
+if secim == 7:
+    print(" ")
+    trip = input("Hangi sebeble trip atıcaksınız?: ")
+    kime = str(input("Kime trip atacaksınız?: "))
+    print(f"{kime} isimli kişiye {trip} sebebinden ötürü trip atıldı!")
+    devam_etme()
+
+if secim == 8:
+    engel = input("Hangi sebeble engel atıcaksınız?: ")
+    kime = str(input("Kime atacaksınız?: "))
+    print(f"{kime} isimli kişiye {engel} sebebinden ötürü engel atıldı!")
+    devam_etme()
+        
+
+else:
+    print("Geçersiz işlem!")
+    devam_etme()
